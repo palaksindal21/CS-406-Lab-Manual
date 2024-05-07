@@ -1,0 +1,21 @@
+class Car {
+    private String model;
+    private int year;
+
+    // Constructor
+    public Car(String model, int year) {
+        this.model = model;
+        this.year = year; // Corrected constructor syntax
+    }
+
+    public void displayInfo() {
+        System.out.println("Model: " + model + ", Year: " + year); // Corrected println syntax
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota Corolla", 2020); // Corrected object creation syntax
+        car1.displayInfo(); // Corrected method call syntax
+    }
+}

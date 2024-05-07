@@ -1,0 +1,23 @@
+class Vehicle { // Base class (parent)
+    protected String brand = "Ford"; // Vehicle attribute
+
+    public void honk() { // Vehicle method
+        System.out.println("Tuut, tuut!"); // Corrected println syntax
+    }
+}
+
+class Car extends Vehicle { // Derived class (child)
+    private String modelName = "Mustang"; // Car attribute
+
+    public void displayModel() {
+        System.out.println("Brand: " + brand + ", Model: " + modelName); // Corrected println syntax
+    }
+}
+
+public class Main { // Moved Main class outside of other classes
+    public static void main(String[] args) {
+        Car myCar = new Car(); // Corrected object creation syntax
+        myCar.honk();
+        myCar.displayModel(); // Corrected method call syntax
+    }
+}

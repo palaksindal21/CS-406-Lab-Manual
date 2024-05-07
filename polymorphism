@@ -1,0 +1,31 @@
+class Animal {
+    public void sound() {
+        System.out.println("Some sound"); // Corrected println syntax
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Woof"); // Corrected println syntax
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Meow"); // Corrected println syntax
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog(); // Corrected object creation syntax
+        Animal myCat = new Cat(); // Corrected object creation syntax
+
+        myAnimal.sound(); // Outputs: Some sound
+        ((Dog) myDog).sound(); // Outputs: Woof (casting to Dog and calling the sound method)
+        ((Cat) myCat).sound(); // Outputs: Meow (casting to Cat and calling the sound method)
+    }
+}

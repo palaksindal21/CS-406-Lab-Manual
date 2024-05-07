@@ -1,0 +1,21 @@
+class AccessSpecifierDemo {
+    public int publicVar = 100; // Accessible from any other class
+    private int privateVar = 200; // Accessible only within the class
+    protected int protectedVar = 300; // Accessible within the class and by derived classes
+
+    public void display() {
+        System.out.println("Public: " + publicVar);
+        System.out.println("Private: " + privateVar);
+        System.out.println("Protected: " + protectedVar);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        AccessSpecifierDemo demo = new AccessSpecifierDemo(); // Corrected object creation syntax
+        demo.display(); // Corrected method call syntax
+        System.out.println(demo.publicVar); // Accessing publicVar is allowed
+        // System.out.println(demo.privateVar); // Error: Cannot access privateVar from outside the class
+        // System.out.println(demo.protectedVar); // Error: Cannot access protectedVar from outside the class without inheritance
+    }
+}
